@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialised css</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="js/jQuery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+    <style>
+        .image{
+            padding-top: 40px;
+            width: 10%;            
+        }
+        .text{
+            font-size: 30px;
+            font-weight: lighter;
+        }
+        .text-contain{
+            padding-top: 30px;
+        }
+        .text2{
+            letter-spacing: 3px;            
+            font-weight: 10px;            
+        }
+        div i.text2{
+            font-family: 'Bona Nova', serif;
+        }
+        .tField{            
+           width: 60%;           
+           padding-top: 20px;           
+           margin-left: 220px;
+           margin-top: 20px;          
+        }                
+        .buttons{
+            padding-top: 10px;
+            font-size: medium;
+        }
+        button{
+            padding: 10px;
+            width: 15%;
+            font-size: larger;
+            font-weight: bold;            
+            border-radius: 20px;
+            background-color: #990000;
+        }
+        div button a{
+            letter-spacing: 2px;            
+        }
+        .foot{
+            padding-top: 30px;
+        }
+        .foot i{
+            font-style: italic;            
+            font-size: 30px;
+            font-weight: light;
+        }
+        .container h3{
+            font-family:'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: bolder;
+            letter-spacing: 0px;
+        }
+        .links{
+            padding-left: 40px;
+            font-size: larger;
+        }        
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="center-align">
+            <img src="img/car-removebg-preview.png" alt="" class="image brand-logo">
+        </div>        
+        <h3 class="black-text center-align headingText">Welcome to RentWheel</h3>
+        <h6 class=" black-text text center-align">Enter your username and password to Login to RentWheel</h6>
+        <div class="row container">
+            <form>                             
+                <div class="input-field col s12 center-align">
+                    <i class=" material-icons prefix">person</i>
+                    <input type="text" id="fname">
+                    <label for="fname">User name</label>
+                </div>                                                                             
+                <div class="input-field col s12 center-align">
+                    <i class=" material-icons prefix">lock</i>
+                    <input type="password" name="fname">
+                    <label for="fname">Password</label>
+                </div>                    
+            </form>    
+            <a href="#" class=" links black-text right">forgot password?</a>
+            <a href="#" class="links black-text right">Sign up</a>
+        </div>                
+        <div class="buttons center-align">
+            <button class="white-text"><a href="home.html" class=" white-text">LOGIN</a></button>
+        </div>    
+        <div class="text-contain center-align">
+            <p class="text2 black-text">For further support, you may visit the help center or contact our</p>            
+        </div>          
+        <div class="center-align">
+            <p class="text2 black-text">customer service team</p>
+        </div>  
+        <div class=" foot center-align">
+            <i class="text2">RentWheel</i>
+            <img src="img/car-removebg-preview.png" width="4%">
+        </div>
+    </div>
+</body>
+</html>

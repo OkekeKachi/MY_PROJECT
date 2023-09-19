@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materialised css</title>
+    <title>Ridey</title>
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <script src="js/jQuery.js"></script>
-    <script src="js/materialize.js"></script>
-    <script>
-        $(document).ready(function(){
-        });
-    </script>
     <style>
         .image{
             padding-top: 40px;
             width: 10%;            
         }
+        .imageTab{
+            padding-top: 40px;
+            width: 30%;            
+        }
+        .imageMobile{
+            padding-top: 40px;
+            width: 30%;            
+        }
+        .container h3{
+            font-family:'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: bolder;
+            letter-spacing: 0px;
+        }
+        .container h2{
+            font-family:'Oswald', sans-serif;
+            font-size: 50px;
+            font-weight: bolder;            
+            letter-spacing: 1px;
+        }
+        .container h4{
+            font-family:'Oswald', sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            letter-spacing: 0px;
+        }
         .text{
             font-size: 30px;
             font-weight: lighter;
         }
-        .text-contain{
-            padding-top: 30px;
-        }
         .text2{
-            letter-spacing: 3px;            
-            font-weight: 10px;            
+            font-size: 25px;
+            font-weight: lighter;
         }
-        div i.text2{
-            font-family: 'Bona Nova', serif;
+        .text3{
+            font-size: 12px;            
         }
-        .tField{            
-           width: 60%;           
-           padding-top: 20px;           
-           margin-left: 220px;
-           margin-top: 20px;          
-        }                
+        .links{
+            padding-left: 40px;
+            font-size: larger;
+            color: black;
+        } 
+        .links:hover{            
+            color: red;
+        }
+        .link{
+            padding-left: 20px;
+            font-size: larger;
+            color: black;
+        } 
+        .link:hover{            
+            color: red;
+        }
         .buttons{
             padding-top: 10px;
+            font-size: medium;
+        }
+        .buttons2{
+            padding-top: 40px;
             font-size: medium;
         }
         button{
@@ -53,66 +84,127 @@
             border-radius: 20px;
             background-color: #990000;
         }
-        div button a{
-            letter-spacing: 2px;            
+        .button2{
+            padding: 10px;            
+            width: 30%;
+            font-size: larger;
+            font-weight: bold;            
+            border-radius: 20px;
+            background-color: #990000;   
         }
-        .foot{
+        .button3{
+            padding: 10px;            
+            width: 20%;
+            font-size: larger;
+            font-weight: bold;            
+            border-radius: 20px;
+            background-color: #990000;   
+        }
+        .text-contain{
             padding-top: 30px;
         }
-        .foot i{
-            font-style: italic;            
-            font-size: 30px;
-            font-weight: light;
+        .text-contain2{
+            padding-top: 70px;
         }
-        .container h3{
-            font-family:'Oswald', sans-serif;
-            font-size: 40px;
-            font-weight: bolder;
-            letter-spacing: 0px;
+        .text-contain3{
+            padding-top: 70px;
         }
-        .links{
-            padding-left: 40px;
-            font-size: larger;
-        }        
+        .text3{
+            font-size: 13px;                       
+            letter-spacing: 2px;
+            font-weight: 10px;            
+        }    
+        div i.text2{
+            font-family: 'Bona Nova', serif;
+            font-size: 35px;
+        }    
     </style>
-    
 </head>
 <body>
     <div class="container">
         <div class="center-align">
-            <img src="img/car-removebg-preview.png" alt="" class="image brand-logo">
-        </div>        
-        <h3 class="black-text center-align headingText">Welcome to RentWheel</h3>
-        <h6 class=" black-text text center-align">Enter your username and password to Login to RentWheel</h6>
+            <img src="img/car-removebg-preview.png" alt="logo" class="image brand-logo hide-on-med-and-down">
+            <img src="img/car-removebg-preview.png" alt="logo" class="imageTab brand-logo hide-on-large-only hide-on-small-only">
+            <img src="img/car-removebg-preview.png" alt="logo" class="imageMobile brand-logo hide-on-med-and-up">
+        </div>
+        <h3 class="black-text center-align headingText hide-on-med-and-down">Welcome to RentWheel</h3>
+        <h2 class="black-text center-align headingText hide-on-large-only hide-on-small-only">Welcome to Ridey</h2>
+        <h4 class="black-text center-align headingText hide-on-med-and-up">Welcome to Ridey</h4>
+        <h6 class=" black-text text center-align hide-on-med-and-down">Enter your username and password to Login to RentWheel</h6>
+        <h6 class=" black-text text2 center-align hide-on-large-only hide-on-small-only">Enter your username and password to Login to RentWheel</h6>
+        <h6 class=" black-text text3 center-align hide-on-med-and-up">Enter your username and password to Login to RentWheel</h6>
         <div class="row container">
-            <form>                             
-                <div class="input-field col s12 center-align">
-                    <i class=" material-icons prefix">person</i>
-                    <input type="text" id="fname">
-                    <label for="fname">User name</label>
-                </div>                                                                             
-                <div class="input-field col s12 center-align">
-                    <i class=" material-icons prefix">lock</i>
-                    <input type="password" name="fname">
-                    <label for="fname">Password</label>
-                </div>                    
-            </form>    
-            <a href="#" class=" links black-text right">forgot password?</a>
-            <a href="#" class="links black-text right">Sign up</a>
-        </div>                
-        <div class="buttons center-align">
-            <button class="white-text"><a href="home.html" class=" white-text">LOGIN</a></button>
-        </div>    
-        <div class="text-contain center-align">
+            <div class="col s12 l12">
+                <form>                             
+                    <div class="input-field col s12 l12 m12 center-align">
+                        <i class=" material-icons prefix">person</i>
+                        <input type="text" id="fname">
+                        <label for="fname">User name</label>
+                    </div>                             
+                    <div class="input-field col s12 m12 l12 center-align">
+                        <i class=" material-icons prefix">lock</i>
+                        <input type="password" id="lname">
+                        <label for="lname">Password</label>
+                    </div>             
+                    <div class=" hide-on-med-and-down">
+                        <a href="#" class=" links black-text right">forgot password?</a>
+                        <a href="#" class="links black-text right">Sign up</a>   
+                    </div>
+                    <div class=" hide-on-large-only hide-on-small-only">
+                        <a href="#" class=" links black-text right">forgot password?</a>
+                        <a href="#" class="links black-text right">Sign up</a>   
+                    </div>
+                    <div class=" hide-on-med-and-up">
+                        <a href="#" class=" link black-text right">forgot password?</a>
+                        <a href="#" class="link black-text right">Sign up</a>   
+                    </div>                        
+                </form>                                                               
+            </div>                                     
+        </div> 
+        <div class="buttons center-align hide-on-med-and-down">
+            <button class="white-text"><a href="home.html" class="white-text">LOGIN</a></button>
+        </div>
+        <div class="buttons center-align hide-on-med-and-up">
+            <button class="button2 white-text"><a href="home.html" class="white-text">LOGIN</a></button>
+        </div>
+        <div class="buttons2 center-align hide-on-large-only hide-on-small-only">
+            <button class="button3 white-text"><a href="home.html" class="white-text">LOGIN</a></button>
+        </div>   
+        <div class="text-contain center-align hide-on-med-and-down">
             <p class="text2 black-text">For further support, you may visit the help center or contact our</p>            
-        </div>          
-        <div class="center-align">
+        </div>
+        <div class="text-contain2 center-align hide-on-small-only hide-on-large-only">
+            <p class="text2 black-text">For further support, you may visit the help center or contact our</p>            
+        </div> 
+        <div class="center-align hide-on-small-only">
             <p class="text2 black-text">customer service team</p>
-        </div>  
-        <div class=" foot center-align">
-            <i class="text2">RentWheel</i>
+        </div>
+        <div class="text-contain3 center-align hide-on-med-and-up">
+            <p class="text3 black-text">For further support, you may visit the help center or contact our customer service team</p>            
+        </div>
+        <div class=" foot center-align hide-on-med-and-down">
+            <i class="text2">Ridey</i>
             <img src="img/car-removebg-preview.png" width="4%">
         </div>
-    </div>
+        <div class=" foot center-align hide-on-large-only hide-on-small-only" style="padding-top: 40px;">
+            <i class="text2">Ridey</i>
+            <img src="img/car-removebg-preview.png" width="8%">
+        </div>
+        <div class=" foot center-align hide-on-med-and-up">
+            <i class="text2">Ridey</i>
+            <img src="img/car-removebg-preview.png" width="15%">
+        </div>                                
+    </div>    
+
+
+
+
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
 </body>
 </html>

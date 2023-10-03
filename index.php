@@ -2,7 +2,7 @@
 include('templates/connect.php');
 
 //create sql query to get data from the database
-$get_data = 'SELECT * FROM my_tb';
+$get_data = 'SELECT * FROM rent_tb';
 //send query command to server
 $send_query = mysqli_query($connect, $get_data);
 //retreive and store data from database

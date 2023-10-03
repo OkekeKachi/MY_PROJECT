@@ -94,6 +94,7 @@ mysqli_close($connect);
             <br><hr><br><br>
             <h4 class="red-text text-darken-4">Our Vehicles</h4> <br>
             <div class="row">
+                
                 <?php foreach($cardData as $card){?>
                     <div class="col s12 l4 m6 xl4">
                         <div class="card">
@@ -129,7 +130,8 @@ mysqli_close($connect);
         $(document).ready(function(){
             $('.slider').slider(
                 {                
-                interval: 1500,                
+                interval: 1500,
+                height: 600              
                 }
             )            
             $('.sidenav').sidenav();

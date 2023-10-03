@@ -15,12 +15,6 @@ mysqli_close($connect);
 ?>
 
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,34 +88,136 @@ mysqli_close($connect);
             <br><hr><br><br>
             <h4 class="red-text text-darken-4">Our Vehicles</h4> <br>
             <div class="row">
-                
-                <?php foreach($cardData as $card){?>
                     <div class="col s12 l4 m6 xl4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="<?php echo $card['image']?>" alt="" style="border-radius:10px;">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
                             </div>
                             <div class="card-content">
-                                <span style="font-size:25px;"><?php echo $card['carName']?></span>
-                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"><?php echo $card['year']?></span>
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
                                 <br><br>
-                                <span><?php echo $card['people']?>people</span>
+                                <span>4 people</span>
                                 <span class="right">Gasoline</span>
                                 <br><br>
                                 <span>Automatic</span>
-                                <span class="right"><?php echo $card['fuel']?>km/1 litre</span>
+                                <span class="right">25 km/1 litre</span>
                             </div>
                             <div class="card-action">
-                                <span style="font-size: 30px;">$<?php echo $card['price']?></span><span >/month</span>
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
                                 <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
                             </div>
                         </div>
-                    </div>                    
-                <?php } ?>                                                                        
+                    </div>                                                                  
+                    <div class="col s12 l4 m6 xl4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
+                                <br><br>
+                                <span>4 people</span>
+                                <span class="right">Gasoline</span>
+                                <br><br>
+                                <span>Automatic</span>
+                                <span class="right">25 km/1 litre</span>
+                            </div>
+                            <div class="card-action">
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
+                                <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
+                            </div>
+                        </div>
+                    </div>                                                                  
+                    <div class="col s12 l4 m6 xl4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
+                                <br><br>
+                                <span>4 people</span>
+                                <span class="right">Gasoline</span>
+                                <br><br>
+                                <span>Automatic</span>
+                                <span class="right">25 km/1 litre</span>
+                            </div>
+                            <div class="card-action">
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
+                                <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
+                            </div>
+                        </div>
+                    </div>                                                                  
+                    <div class="col s12 l4 m6 xl4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
+                                <br><br>
+                                <span>4 people</span>
+                                <span class="right">Gasoline</span>
+                                <br><br>
+                                <span>Automatic</span>
+                                <span class="right">25 km/1 litre</span>
+                            </div>
+                            <div class="card-action">
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
+                                <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
+                            </div>
+                        </div>
+                    </div>                                                                  
+                    <div class="col s12 l4 m6 xl4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
+                                <br><br>
+                                <span>4 people</span>
+                                <span class="right">Gasoline</span>
+                                <br><br>
+                                <span>Automatic</span>
+                                <span class="right">25 km/1 litre</span>
+                            </div>
+                            <div class="card-action">
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
+                                <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
+                            </div>
+                        </div>
+                    </div>                                                                  
+                    <div class="col s12 l4 m6 xl4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/vehicle.jpg" alt="" style="border-radius:10px;" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <span style="font-size:25px;">Car One</span>
+                                <span class="right" style="font-size: large; padding: 5px; border: 2px #990000 solid; border-radius: 10px; border-style: dotted;"></span>
+                                <br><br>
+                                <span>4 people</span>
+                                <span class="right">Gasoline</span>
+                                <br><br>
+                                <span>Automatic</span>
+                                <span class="right">25 km/1 litre</span>
+                            </div>
+                            <div class="card-action">
+                                <span style="font-size: 30px;"></span><span >$35/month</span>
+                                <button class="right" style="background-color: #990000; padding-right: 0%; padding-left: 20px;border-radius: 15px;"><a href="#" class=" white-text">Rent now</a></button>
+                            </div>
+                        </div>
+                    </div>                                                                  
             </div>            
         </div>
     </main>
-    <footer></footer>
+    <?php include('templates/footer.php'); ?>
 
     
     <script src="js/jQuery.js"></script>

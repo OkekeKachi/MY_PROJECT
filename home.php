@@ -72,7 +72,7 @@ mysqli_close($connect);
                             <button class="btn red darken-4 pulse"><a href="insert.php">Rent a Car</a></button>                  
                         </li>                       
                         <li style="padding-left: 10px; padding-top: 2px;" class=" hide-on-small-only">                            
-                            <a href="index.php" class="red-text text-darken-4">
+                            <a href="index.html" class="red-text text-darken-4">
                                 <i class="material-icons small left ">settings_power</i>    
                                 logout
                             </a>                

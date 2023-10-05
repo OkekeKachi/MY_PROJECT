@@ -72,7 +72,7 @@
                     <label for="fuel">Fuel consumption (amount of km/l)</label>
                 </div> 
                 <div class="input-field col s12 l6 center-align">
-                    <i class=" material-icons prefix">directions_car</i>
+                    <i class=" material-icons prefix">store</i>
                     <input type="text" id="brand">
                     <label for="brand">Enter brand name</label>
                 </div>                                             

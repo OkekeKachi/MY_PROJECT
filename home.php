@@ -2,7 +2,7 @@
 include('templates/connect.php');
 
 //create sql query to get data from the database
-$get_data = 'SELECT * FROM my_tb';
+$get_data = 'SELECT * FROM rent_tb';
 //send query command to server
 $send_query = mysqli_query($connect, $get_data);
 //retreive and store data from database
@@ -58,7 +58,35 @@ mysqli_close($connect);
 </style>
 <body>
     <header>
-        <?php include('templates/header.php') ?>        
+        <div class=" navbar-fixed">
+            <nav class="nav-wrapper white z-depth-1">
+                <div class=" container navbar">                    
+                    <a href="index.html" class="brand-logo left hide-on-med-and-up">                        
+                        <img src="img/car-logo.png" alt="" class="responsive-img" width="20%">
+                    </a>                                      
+                    <a href="index.html" class="brand-logo left hide-on-small-only">                                                
+                        <img src="img/car-logo.png" alt="" class="responsive-img" width="10%">
+                    </a>                  
+                    <ul class="right"> 
+                        <li>
+                            <button class="btn red darken-4 pulse"><a href="insert.php">Rent a Car</a></button>                  
+                        </li>                       
+                        <li style="padding-left: 10px; padding-top: 2px;" class=" hide-on-small-only">                            
+                            <a href="index.php" class="red-text text-darken-4">
+                                <i class="material-icons small left ">settings_power</i>    
+                                logout
+                            </a>                
+                        </li> 
+                        <li style="padding-left: 10px; padding-top: 2px;" class=" hide-on-med-and-up">                            
+                            <a href="index.php" class="red-text text-darken-4">
+                                Login   
+                            </a>                
+                        </li>                  
+                    </ul>                    
+                </div>
+            </nav>
+        </div>
+               
         <section>
             <div class="slider">
                 <ul class="slides">                    
@@ -86,7 +114,7 @@ mysqli_close($connect);
                 RentWheel provides many individuals and businesses with the convenience of renting vehicles for long and short-term use.
             </p>
             <br><hr><br><br>
-            <h4 class="red-text text-darken-4">Our Vehicles</h4> <br>
+            <h4 class="red-text text-darken-4">Recently Rented</h4> <br>
             <div class="row">
 
                 <?php foreach($cardData as $card){?>
@@ -115,7 +143,9 @@ mysqli_close($connect);
             </div>            
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <?php include('templates/footer.php'); ?>
+    </footer>
 
     
     <script src="js/jQuery.js"></script>

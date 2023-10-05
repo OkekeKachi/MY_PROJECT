@@ -56,7 +56,7 @@
                         </div>
                         <br><br><br><br>                        
                         <div class="buttons center-align">
-                            <button class="white-text"><a href="index.php" class="white-text">LOGIN</a></button>
+                            <button class="white-text"><a href="home.php" class="white-text">LOGIN</a></button>
                         </div>                        
                     </form>                                
                 </div>

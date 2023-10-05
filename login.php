@@ -1,3 +1,56 @@
+<?php
+// Connect to Database
+include('templates/db_connect.php');
+
+//Create blank variables 
+$username = $password = '';
+$userr ='';
+$pswd ='';
+//Check if the Login Button is clicked
+if(isset($_POST['login'])){
+
+    //Store POST values in a variable
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    //Write SQL query to get login details from the database
+    $sql = "SELECT * FROM login_tb WHERE username = '$username'";
+
+    //check the username from the input is found on the database
+    if(mysqli_num_rows(mysqli_query($connect,$sql))>0){
+
+        //If true, run the query below
+        $run = mysqli_query($connect,$sql);
+
+        //Store result in an associative array
+        $login_result = mysqli_fetch_all($run,MYSQLI_ASSOC);
+
+        //if username is found, get the password attached to that username
+        $login_details = $login_result[0];
+        $password = $login_details['password'];
+
+        //Check the rerieved password, if it matches the user input
+        if($password == $_POST['password']){
+            //Redirect to landing page 
+            header('Location:home.php');
+    } else {
+       //if username or password is not found set the error variable and the blank_input values
+        $error = 'Check  password';
+        $userr = $_POST['username'];
+     
+        }
+    }else {
+
+        //if username or password is not found set the error variable and the blank_input values
+         $error = 'Wrong username';
+         $userr = $_POST['username'];
+         $pswd = $_POST['password'];
+         }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,26 +90,26 @@
                 <div class="card-content">
                     <div class="center-align">
                         <span style="font-size: 40px;"> <strong class="red-text text-darken-4" style="font-size: 50px;">R</strong >entWheel</span>
-                        <img src="img/car-removebg-preview.png" alt="logo" width="6%">
+                        <img src="img/car-logo.png" alt="logo" width="6%">
                     </div>                                
                     <br><br>               
-                    <form class="center-align container" >                             
+                    <form class="center-align container" method="POST">                             
                         <div class="input-field  center-align">
                             <i class=" material-icons prefix">person</i>
-                            <input type="text" id="fname">
-                            <label for="fname">Enter your username</label>
+                            <input type="text" name="username" id="username" required>
+                            <label for="username">Enter your username</label>
                         </div>                        
                         <div class="input-field center-align" style="margin-top:50px;">
                             <i class=" material-icons prefix">lock</i>
-                            <input type="password" id="lname">
-                            <label for="lname">Enter your password</label>
+                            <input type="password" name="password" id="password" required>
+                            <label for="password">Enter your password</label>
                         </div> 
                         <div class="right">                            
                             <a href="#" class="links">Sign up</a>   
                         </div>
                         <br><br><br><br>                        
                         <div class="buttons center-align">
-                            <button class="white-text"><a href="home.php" class="white-text">LOGIN</a></button>
+                            <input type="submit" name="login" id="login" value="LOGIN" class="red darken-4 white-text btn-flat">
                         </div>                        
                     </form>                                
                 </div>

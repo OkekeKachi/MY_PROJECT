@@ -10,6 +10,9 @@ $cardData = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
 //close database connection
 mysqli_close($connect);
 
+session_start();
+
+
 // print_r($cardData);
 
 ?>
@@ -61,10 +64,10 @@ mysqli_close($connect);
         <div class=" navbar-fixed">
             <nav class="nav-wrapper white z-depth-1">
                 <div class=" container navbar">                    
-                    <a href="index.html" class="brand-logo left hide-on-med-and-up">                        
+                    <a href="#" class="brand-logo left hide-on-med-and-up">                        
                         <img src="img/car-logo.png" alt="" class="responsive-img" width="20%">
                     </a>                                      
-                    <a href="index.html" class="brand-logo left hide-on-small-only">                                                
+                    <a href="#" class="brand-logo left hide-on-small-only">                                                
                         <img src="img/car-logo.png" alt="" class="responsive-img" width="10%">
                     </a>                  
                     <ul class="right"> 
@@ -72,7 +75,7 @@ mysqli_close($connect);
                             <button class="btn red darken-4 pulse"><a href="insert.php">Rent a Car</a></button>                  
                         </li>                       
                         <li style="padding-left: 10px; padding-top: 2px;" class=" hide-on-small-only">                            
-                            <a href="index.html" class="red-text text-darken-4">
+                            <a href="logout.php" class="red-text text-darken-4">
                                 <i class="material-icons small left ">settings_power</i>    
                                 logout
                             </a>                
@@ -115,13 +118,12 @@ mysqli_close($connect);
             </p>
             <br><hr><br><br>
             <h4 class="red-text text-darken-4">Recently Rented</h4> <br>
-            <div class="row">
-
+            <div class="row">            
                 <?php foreach($cardData as $card){?>
                     <div class="col s12 l4 m6 xl4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="<?php echo $card['image']?>" alt="" style="border-radius:10px;">
+                                <img src="<?php echo $_SESSION['car-image']; ?>" alt="" style="border-radius:10px;">
                             </div>
                             <div class="card-content">
                                 <span style="font-size:25px;"><?php echo $card['carName']?></span>

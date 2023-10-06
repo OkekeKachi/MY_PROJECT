@@ -1,6 +1,6 @@
 <?php
 // Connect to Database
-include('templates/db_connect.php');
+include('templates/connect.php');
 
 //Create blank variables 
 $username = $password = '';

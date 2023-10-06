@@ -2,32 +2,40 @@
 include('templates/connect.php');
     // Declare empty variables
     $carName='';
-    $people='';    
+    $carImg='';    
     
     // Check if the submit button is clicked
     if(isset($_POST['upload'])){
         // Record the inputs
         $carName=$_POST['carName'];
-        $people=$_POST['people'];
-        
+
+
+        $send_car_query = "SELECT `car_name`, `car_image`, `car_size`, `fuel_consumption`, `manufacture_year`, `rent_price`, `car_suspension` FROM cars_tb WHERE `car_name` = '$carName'";
+        $send_query = mysqli_query($connect, $send_car_query);
+        $carData = mysqli_fetch_assoc($send_query);
+
+
+        $carImg = $carData['car_image'];
+        $carSize = $carData['car_size'];
+        $fuelConsumption = $carData['fuel_consumption'];
+        $manufactureYear = $carData['manufacture_year'];
+        $rentPrice = $carData['rent_price'];
+        $carSuspension = $carData['car_suspension'];        
+
         // Write the query
-        $save_query="INSERT INTO `rent_tb`(`carName`) VALUES ('$carName')";
+        $save_query = "INSERT INTO `rent_tb`(`carName`, `image`, `people`, `fuel`, `year`, `price`, `suspension`) VALUES ('$carName', '$carImg', '$carSize', '$fuelConsumption', '$manufactureYear', '$rentPrice', '$carSuspension' )";
         // send this query to the server
         $send_to_server = mysqli_query($connect, $save_query);
         // check if the data is sent to the database        
         if($send_to_server){
-            $send_car_query = "SELECT FROM `car_tb` WHERE car_name='$carName'";
-            $send_query = mysqli_query($connect, $send_car_query);
-            $carData = mysqli_fetch_assoc($send_query);
-            session_start();
-            $_SESSION['car_name']= $carData['car_name'];
-            $_SESSION['car-image']= $carData['car-image'];
-            
             header('Location: home.php');
         }
         else{
             echo 'Error Loging in' . mysqli_error(($connect));
         }
+
+
+
     };
     mysqli_close($connect);                  
 ?>
@@ -80,16 +88,19 @@ include('templates/connect.php');
             <div class="container white">
                 <h3 class=" red-text text-darken-4 center-align">Upload Rented Vehicles</h3>
                 <br><br>
-                <form action="" method="POST">
+                <form action="insert.php" method="POST">
                     <div class="row">
                         
                         <div class="input-field col s12 l12">
                         <i class=" material-icons prefix">directions_car</i>
-                            <select>
+                            <select name="carName">
                                 <option value="">Choose your Vehicle </option>
-                                <option value="Toyota" name="carName">Toyota</option>
-                                <option value="Cadillac" name="carName">Cadillac</option>
-                                <option value="Cadillac" name="carName">mercedes</option>
+                                <option value="Toyota Tacoma">Toyota</option>
+                                <option value="EL Volkswagen">Volkswagen</option>
+                                <option value="Hyundia">Hyundia</option>
+                                <option value="Cadillac CT2025">Cadillac</option>
+                                <option value="Porsche Panamera">Porsche</option>
+                                <option value="Mercedes-AMG">Mercedes</option>
                             </select>
                         </div>        
                         
@@ -123,7 +134,7 @@ include('templates/connect.php');
                     </div>  
                     <br><br> 
                     <div class="buttons center-align">
-                        <input type="submit" name="upload" id="upload" value="UPLOAD" class="btn red darken-4 white-text" >
+                        <input type="submit" name="upload" id="upload" value="upload" class="btn red darken-4 white-text" >
                     </div>
                     <br>                      
                 </form>
